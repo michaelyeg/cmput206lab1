@@ -53,16 +53,8 @@ def equahis(hist, originimg):
 
 # Input a list of plots and display in one
 def plotmulti(imglist):
-    cmdstr = ""
-    if len(imglist) == 4:
-        cmdstr = "22"
-        for i in range(0, 4):
-            cmdstr += str(i+1)
-            plt.subplot(int(cmdstr))
-            plt.plot(imglist[i])
-            cmdstr = "22"
-        plt.show()
-    elif len(imglist) == 2:
+    # Use for histogram comparison only
+    if len(imglist) == 2:
         cursor=plt.subplot(121)
         cursor.set_title('Histogram by OpenCV')
         plt.plot(imglist[0])
