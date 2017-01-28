@@ -11,7 +11,7 @@ class image:
         self.image = cv2.imread(filename, 0)
 
     def createhist(self):
-        if len(self.image)!=0:
+        if len(self.image) != 0:
             self.histogram = cv2.calcHist([self.image], [0], None, [256], [0, 256])
 
     def normalizehist(self):
